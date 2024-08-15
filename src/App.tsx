@@ -10,7 +10,7 @@ interface IPost{
 }
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [postList, setPostList] = useState<IPost[]>([]);
 
   useEffect(() => {
