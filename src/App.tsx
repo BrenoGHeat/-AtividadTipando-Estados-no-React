@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react"
 import { api } from "./services/api";
 
+
+interface IPost{
+  id: number;
+  title: string;
+  content: string;
+  author: string;
+}
+
 function App() {
   const [loading, setLoading] = useState(false);
-  const [postList, setPostList] = useState([]);
+  const [postList, setPostList] = useState<IPost[]>([]);
 
   useEffect(() => {
     const loadPosts = async () => {
